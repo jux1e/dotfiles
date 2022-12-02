@@ -9,4 +9,5 @@ return require('packer').startup(function()
   use({'ckipp01/nvim-jenkinsfile-linter', requires = { "nvim-lua/plenary.nvim" } })
   use 'tpope/vim-surround'
   use { "catppuccin/nvim", as = "catppuccin" }
+  use {'neoclide/coc.nvim', branch = 'release'}
 end)

@@ -71,7 +71,7 @@ ZSH_THEME="philips"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 # requires fortune and strfile
-plugins=(git aliases alias-finder tmux thefuck themes zsh-interactive-cd)
+plugins=(git git-prompt aliases alias-finder tmux thefuck themes zsh-interactive-cd zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -102,4 +102,12 @@ fi
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias fzf="fzf --height 30% --border"
 alias dotfiles="/usr/bin/git --git-dir=$HOME/priv/dotfiles --work-tree=$HOME"
+### zen specific config
+alias encore-aws='ssh -i /home/dasty/.ssh/privateEncoreAWS.pem ec2-user@3.124.1.48'
+alias get_idf='. $HOME/Documents/WORKDIR/esp/esp-idf/export.sh'
+alias ryzen-low='sudo ryzenadj --stapm-limit=12000 --fast-limit=12000 --slow-limit=12000 --apu-slow-limit=20000 --tctl-temp=60 --apu-skin-temp=60;sudo amdctl -m -p0 -v88;sudo cpupower frequency-set -g conservative'
+alias ryzen-lower='sudo ryzenadj --stapm-limit=12000 --fast-limit=12000 --slow-limit=12000 --apu-slow-limit=20000 --tctl-temp=60 --apu-skin-temp=60;sudo amdctl -m -p0 -v88;sudo cpupower frequency-set -g powersave'
+alias ryzen-high='sudo ryzenadj --stapm-limit=34000 --fast-limit=34000 --slow-limit=34000 --apu-slow-limit=34000 --tctl-temp=75 --apu-skin-temp=75;sudo amdctl -m -p0 -v53;sudo cpupower frequency-set -g schedutil'
+alias enc_key='ssh -i /home/dasty/ENCORE/keys/enc_mainkey'
+alias prv_key='ssh -i /home/dasty/ENCORE/keys/prv_mainkey'
 source ~/.zsh/catppuccin_mocha-zsh-syntax-highlighting.zsh
