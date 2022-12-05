@@ -1,4 +1,6 @@
 lua require('plugins')
+lua require('tree')
+lua require('sitter')
 set termguicolors
 colorscheme catppuccin-mocha
 set relativenumber

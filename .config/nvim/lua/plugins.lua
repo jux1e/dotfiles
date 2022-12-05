@@ -10,4 +10,9 @@ return require('packer').startup(function()
   use 'tpope/vim-surround'
   use { "catppuccin/nvim", as = "catppuccin" }
   use {'neoclide/coc.nvim', branch = 'release'}
+  use {'nvim-tree/nvim-tree.lua'}
+  use {
+    'nvim-treesitter/nvim-treesitter',
+    run = ':TSUpdate'
+  }
 end)

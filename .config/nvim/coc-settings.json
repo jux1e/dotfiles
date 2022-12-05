@@ -30,4 +30,7 @@
     "blade": "blade-formatter",
     "cmake": "cmake-format",
     }
+    {
+      "diagnostic.virtualText": true,
+      "diagnostic.virtualTextCurrentLineOnly": false
 }
